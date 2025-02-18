@@ -1,7 +1,5 @@
 # 🏆 Buscaminas
-<p align="center">
-    <img src="../portada.PNG" alt="Buscaminas" />
-</p>
+
 Este proyecto de Buscaminas fue desarrollado en colaboración con mis compañeros de clase. La temática del juego fue inspirada por nuestro profesor, quien es celíaco, y en lugar de las tradicionales minas, decidimos representar las bombas con granos de trigo. El juego ha sido implementado utilizando HTML, CSS y JavaScript.
 
 
