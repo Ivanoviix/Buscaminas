@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+      <meta charset="UTF-8">
+      <title>Buscaminas</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+      <h1>BuscaGluten</h1>
+      <div id="trig"></div>
+      <div class="nub"></div>
+      <div class="nub"></div>
+      <div class="nub"></div>
+      <div class="nub"></div>
+</header>
+<div class="contenedor" id="menu1">
+      <h2>Elige el tablero</h2>
+      <button onclick="select_size(6)">6 x 6</button>
+      <button onclick="select_size(8)">8 x 8</button>
+      <button onclick="select_size(10)">10 x 10</button>
+      <button onclick="select_size(12)">12 x 12</button>
+      <button onclick="select_size(14)">14 x 14</button>
+      <button onclick="select_size(16)">16 x 16</button>
+</div>
+<div class="contenedor" id="menu2">
+      <h2>Elige la dificultad</h2>
+      <button onclick="select_difficulty(0)">Fácil</button>
+      <button onclick="select_difficulty(1)">Medio</button>
+      <button onclick="select_difficulty(2)">Difícil</button>
+      <button onclick="select_difficulty(3)">Locura</button>
+</div>
+<div class="contenedor" id="menu3">
+      <div id="board"></div>
+      <div id="contadorbanderas" class="contador-banderas">
+            <h3>Banderas restantes:</h3>
+            <span id="contador-banderas">0</span>
+      </div>
+      <div id="cronometro">
+            <h3>Tiempo de la partida</h3>
+            <span>
+              <span id="minutos">00</span>:<span id="segundos">00</span>
+            </span>
+      </div>
+      <div>
+            <button onclick="reset()">Empezar<br>de nuevo<br></button>
+      </div>
+</div>
+<div id="gameover-message" class="gameover-message">
+      <p>Game<br>Over!</p>
+      <span></span>
+</div>
+<div id="win-message" class="win-message">
+      <p>You win!</p>
+      <span></span>
+</div>
+<audio id="background_music" src="sounds/background_music.mp3" autoplay></audio>
+<script src="ramon.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="50" height="50" viewBox="-16 -16 32 32">
+    <defs>
+
+        <g id="sems">
+            <g id="sem1" fill="url(#grad1)">
+                <path d="M 0 0 C 0 -1 -2.37 -2 -3 -3 C -2.6 -2 0 -1 0 0 Z"/>
+                <path d="M 0 0 C 0 -1 0 -2 -2 -2 C -2 0 -1 0 0 0 Z"/>
+            </g>
+            <g id="sem2" fill="url(#grad1)">
+
+                <path d="M 0 0 C 0 -1 2.37 -2 3 -3 C 2.6 -2 0 -1 0 0 Z"/>
+                <path d="M 0 0 C 0 -1 0 -2 2 -2 C 2 0 1 0 0 0 Z"/>
+            </g>
+        </g>
+        <path id="vara" fill="#f5bb1d" d="M -0.5 0 L 0 -35 L 0.5 0 Z"/>
+
+        <g id="trigo">
+            <use href="#vara"/>
+            <use href="#sem1" transform="rotate(45) translate(-22, -22)"/>
+            <use href="#sem1" transform="rotate(30) translate(-15.5, -26)"/>
+            <use href="#sem1" transform="rotate(60) translate(-26, -15.5)"/>
+            <use href="#sems" transform="translate(0, -30)"/>
+            <use href="#sems" transform="translate(0, -29) scale(1.1)"/>
+            <use href="#sems" transform="translate(0, -28) scale(1.15)"/>
+            <use href="#sems" transform="translate(0, -27) scale(1.2)"/>
+            <use href="#sems" transform="translate(0, -26) scale(1.25)"/>
+            <use href="#sems" transform="translate(0, -25) scale(1.3)"/>
+            <use href="#sems" transform="translate(0, -24) scale(1.35)"/>
+            <use href="#sems" transform="translate(0, -23) scale(1.4)"/>
+            <use href="#sems" transform="translate(0, -22) scale(1.4)"/>
+            <use href="#sems" transform="translate(0, -21) scale(1.35)"/>
+            <use href="#sems" transform="translate(0, -20) scale(1.3)"/>
+            <use href="#sems" transform="translate(0, -19) scale(1.25)"/>
+            <use href="#sems" transform="translate(0, -18) scale(1.2)"/>
+            <use href="#sems" transform="translate(0, -17) scale(1.1)"/>
+        </g>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop stop-color="#fadc16" offset="0%"/>
+            <stop stop-color="#571e0f" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(0, 7)">
+        <use href="#trigo" transform="translate(0, 20) rotate(15) scale(0.9)"/>
+        <use href="#trigo" transform="translate(-6, 20) rotate(-13)"/>
+        <use href="#trigo" transform="translate(10, 20) rotate(13) scale(1.1)"/>
+        <use href="#trigo" transform="translate(-22, 20) rotate(13) scale(1.1)"/>
+        <use href="#trigo" transform="translate(0, 20) rotate(-15)"/>
+        <use href="#trigo" transform="translate(0, 20) scale(1.1)"/>
+        <use href="#trigo" transform="translate(5, 20) rotate(10) scale(1.15)"/>
+    </g>
+</svg>

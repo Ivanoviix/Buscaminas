@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="160" height="40" viewBox="-35 -10 70 20">
+    <defs>
+        <path id="Nubesita2" fill="url(#grad1)" d="M 0 9 L 32 9 C 38 9 34 1 31 7 C 32 5 29 5 29 6 C 31 1 28 -3 23 0 C 25 -9 13 -11 15 0 C 7 -16 -5 -4 -1 2 C -5 -4 -10 0 -4 4 C -5 3 -6 5 -4 5 C -16 5 -10 9 -7 9 Z"/>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop stop-color="#fff" offset="30%"/>
+            <stop stop-color="rgba(255, 255, 255, 0.5)" offset="90%"/>
+            <stop stop-color="rgba(255, 255, 255, 0)" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <use href="#Nubesita2"/>
+</svg>

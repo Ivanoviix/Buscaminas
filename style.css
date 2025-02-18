@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Glutamato;
+    src: url(fonts/PatrickHandSC-Regular.ttf);
+}
+@font-face {
+    font-family: Gluten;
+    src: url(fonts/Wigglye.ttf);
+}
+:root {
+    --widB:450px;
+    --heiB:450px;
+    --NColumnas: 12;
+    --NFilas: 12;
+    --Wid: calc(var(--widB) / var(--NColumnas));
+    --Hei: calc(var(--heiB) / var(--NFilas));
+    --gradient:linear-gradient(180deg, rgba(122,232,255,1) 0%, rgba(117,255,219,1) 36%, rgba(243,255,117,1) 60%, rgba(255,189,70,1) 79%, rgba(255,96,36,1) 91%, rgba(158,26,203,1) 100%);
+}
+
+/*-------------------------------------------------------------------*/
+/* ESTILOS GENERALES */
+/*-------------------------------------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #ffed94;
+    font-family: Glutamato, cursive, sans serif;
+}
+header {
+    margin: 0;
+    height: 250px;
+    width: 100%;
+    background: var(--gradient);
+    background-size: 200% 200%;
+    animation: grad 60s 0s linear 1 forwards;}
+h1 {
+    padding: 50px;
+    text-align: center;
+    margin: 0;
+    height: 100px;
+    font-size: 55pt;
+    color: white;
+    font-family: Gluten, sans-serif;
+    text-shadow: 3px 3px black;
+}
+
+h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h2 {
+    width: 100%;
+}
+
+
+/* ESTILOS TABLERO */
+#board {
+    width: var(--widB);
+    height: var(--heiB);
+    display: grid;
+    grid-template-columns: repeat(var(--NColumnas), var(--Wid));
+    grid-template-rows: repeat(var(--NFilas), var(--Hei));
+    margin: 0 auto;
+    grid-row: span 3;
+    box-shadow: 10px 10px 5px 0px rgba(194,138,49,1);
+}
+/*-------ESTILO DE LAS CELDAS---------*/
+#board > div {
+    font-size: var(--Wid);
+    background-color: #f5ca56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    border: 1px solid #a1672a;
+    border-collapse: collapse;
+    background-image: url("img/Arenilla.svg");
+    background-size: cover;
+}
+
+#board > div:hover {
+    background-color: #e8be4d;
+}
+
+#board > div > img {
+    width: 100%;
+}
+
+/*------------------------------------------------------------------------*/
+/* ---------------------------------------ESTILOS MENUS DIFICULTAD/TAMAÑO */
+/*------------------------------------------------------------------------*/
+/* ------------------------------------------ ELEMENTOS LATERALES DERECHA */
+
+.contenedor {
+    display: none;
+    margin: 0 auto;
+    width: 705px;
+    padding: 30px 0;
+}
+
+#menu1, #menu2 {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: Gluten, sans-serif;
+}
+
+#menu1 {
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    grid-template-rows: 100px repeat(2, 170px);
+}
+#menu1 h2{
+    grid-column: 1 / span 3;
+}
+
+#menu2 {
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: 100px repeat(2, 170px);
+}
+#menu2 h2 {
+    grid-column: 1 / span 2;
+    margin-top: 20px;
+}
+
+#menu1 h2, #menu2 h2 {
+    font-size: 39pt;
+    color: #a1672a;
+    font-family: Gluten, sans-serif;
+    text-shadow: 3px 3px black;
+}
+
+button {
+    background-color: #f5ca56;
+    width: 70%;
+    min-height: 70%;
+    border-style: none;
+    border-radius: 10px;
+    font-family: Glutamato, cursive;
+    font-size: 17pt;
+    box-shadow: 0px 3px 0px 0px rgba(194,138,49,1);
+    padding: 20px;
+}
+
+button:hover {
+    background-color: #ffc938;
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.contenedor:nth-of-type(3) {    /* TABLERO */
+    grid-gap: 5px;
+    grid-template-columns: auto 200px; /*Esto ajusta el espacio que ocupa la primera columna y la segunda*/
+    grid-template-rows: repeat(2, 115px) 140px; /* El tercer Valor es el boton de reinicio*/
+}
+.contenedor:nth-of-type(3) > div:nth-of-type(n+2) {
+    background-color: #3bc6d9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 10px 5px 0px rgba(194,138,49,1);
+}
+
+
+/*--------------BANDERAS--------------*/
+/*--------------BOTON REINICIO-------*/
+/* -------------CRONOMETRO----------*/
+.contador-banderas h3,
+.contador-banderas span,
+#cronometro h3, #cronometro > span {
+    border-radius: 5px;
+    background-color: #f5ca56;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.17em;
+    min-width: 40%;
+    display: inline-block; /* Esto permite ajustar el width para los span */
+}
+
+/*
+-------------
+---------------- HEADER DECORATIONS ----------
+-------------
+*/
+
+#trig {
+    width: 100%;
+    height: 50px;
+    background-image: url("img/Trigo2.svg");
+    background-size: 50px;
+}
+
+.nub {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    animation: wave 400s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    background-image: url("img/Nubesita.svg");
+    background-size: cover;
+    z-index: 1;
+}
+
+.nub:nth-of-type(2) {
+    width: 600px;
+    height: 130px;
+    top: 0;
+    left: 0;
+    background-image: url("img/Nubesita3.svg");
+    animation: wave 150s -3s linear infinite;
+}
+.nub:nth-of-type(3) {
+    top: 100px;
+    left: 1000px;
+    background-image: url("img/Nubesita2.svg");
+    animation: wave 200s -3s linear infinite;
+}
+.nub:nth-of-type(4) {
+    width: 200px;
+    height: 50px;
+    bottom: 0;
+    left: 800px;
+    animation: wave 120s -3s linear infinite;
+}
+/*-----------------------------------------------
+--------------------------------------ANIMACIONES
+-----------------------------------------------*/
+@keyframes wave {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(200%);
+    }
+    75% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes gameoverAnimation {
+    0% {
+        transform: translateX(-100%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes grad {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+.slideIn {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+
+/*
+---------------------------
+---------------------------GAME OVER // WIN
+-------------------------*/
+
+p {
+    margin: 0;
+    font-family: Gluten, sans-serif;
+    text-shadow: 3px 3px black;
+}
+.gameover, .win {
+    /* Estilo para el contenedor del juego cuando ocurra el game over */
+    pointer-events: none; /* Desactiva la interacción con el juego durante la animación de game over */
+}
+.gameover-message, .win-message {
+    display: none; /* Inicialmente oculto */
+    width: 480px;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: calc(50% - 345px);
+    background-color: red;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-size: 100px;
+    animation: gameoverAnimation 1s ease-in-out forwards;
+    overflow: visible;
+}
+.win-message  {
+    padding: 20px;
+    height: 150px;
+    background-color: forestgreen;
+}
+.gameover-message > span, .win-message > span {
+    height: 315px;
+    width: 420px;
+    background-image: url("ramon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: -287px;
+}

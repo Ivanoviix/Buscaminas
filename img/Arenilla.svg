@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="40" height="40" viewBox="-10 -10 20 20">
+    <defs>
+    </defs>
+    <g fill="#e8bc46">
+        <circle r="0.1"/>
+        <circle r="0.2" cx="1" cy="-1"/>
+        <circle r="0.4" cx="-2" cy="2"/>
+        <circle r="0.2" cx="3" cy="-3"/>
+        <circle r="0.6" cx="-4" cy="-4"/>
+        <circle r="0.2" cx="5" cy="5"/>
+        <circle r="0.2" cx="6" cy="-6"/>
+        <circle r="0.2" cx="-7" cy="-7"/>
+        <circle r="0.6" cx="8" cy="8"/>
+        <circle r="0.2" cx="9" cy="-9"/>
+        <circle r="0.3" cx="-8" cy="-1.4"/>
+        <circle r="0.8" cx="7" cy="9"/>
+        <circle r="0.2" cx="-6" cy="-8"/>
+        <circle r="0.4" cx="5" cy="7"/>
+        <circle r="0.2" cx="-4" cy="-6"/>
+        <circle r="0.1" cx="-3" cy="5"/>
+        <circle r="0.8" cx="2" cy="-4"/>
+        <circle r="0.2" cx="-1" cy="3"/>
+        <circle r="0.3" cx="2" cy="-2"/>
+        <circle r="0.5" cx="3" cy="1"/>
+    </g>
+</svg>
